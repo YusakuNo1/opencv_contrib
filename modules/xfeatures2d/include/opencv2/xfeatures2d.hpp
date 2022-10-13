@@ -210,7 +210,7 @@ public:
      */
     enum BeblidSize
     {
-        SIZE_512_BITS = 100, SIZE_256_BITS = 101,
+        BS_SIZE_512_BITS = 100, BS_SIZE_256_BITS = 101,
     };
     /** @brief Creates the BEBLID descriptor.
     @param scale_factor Adjust the sampling window around detected keypoints:
@@ -219,9 +219,9 @@ public:
     - <b> 6.25f </b> is default and fits for KAZE, SURF detected keypoints
     - <b> 5.00f </b> should be the scale for AKAZE, MSD, AGAST, FAST, BRISK keypoints
     @param n_bits Determine the number of bits in the descriptor. Should be either
-     BEBLID::SIZE_512_BITS or BEBLID::SIZE_256_BITS.
+     BEBLID::BS_SIZE_512_BITS or BEBLID::BS_SIZE_256_BITS.
     */
-    CV_WRAP static Ptr<BEBLID> create(float scale_factor, int n_bits = BEBLID::SIZE_512_BITS);
+    CV_WRAP static Ptr<BEBLID> create(float scale_factor, int n_bits = BEBLID::BS_SIZE_512_BITS);
 };
 
 /** @brief Class implementing TEBLID (Triplet-based Efficient Binary Local Image Descriptor),
@@ -253,7 +253,7 @@ public:
      */
     enum TeblidSize
     {
-        SIZE_256_BITS = 102, SIZE_512_BITS = 103,
+        TS_SIZE_256_BITS = 102, TS_SIZE_512_BITS = 103,
     };
     /** @brief Creates the TEBLID descriptor.
     @param scale_factor Adjust the sampling window around detected keypoints:
@@ -262,9 +262,9 @@ public:
     - <b> 6.25f </b> is default and fits for KAZE, SURF detected keypoints
     - <b> 5.00f </b> should be the scale for AKAZE, MSD, AGAST, FAST, BRISK keypoints
     @param n_bits Determine the number of bits in the descriptor. Should be either
-     TEBLID::SIZE_256_BITS or TEBLID::SIZE_512_BITS.
+     TEBLID::TS_SIZE_256_BITS or TEBLID::TS_SIZE_512_BITS.
     */
-    CV_WRAP static Ptr<TEBLID> create(float scale_factor, int n_bits = TEBLID::SIZE_256_BITS);
+    CV_WRAP static Ptr<TEBLID> create(float scale_factor, int n_bits = TEBLID::TS_SIZE_256_BITS);
 };
 
 /** @brief Class implementing DAISY descriptor, described in @cite Tola10
